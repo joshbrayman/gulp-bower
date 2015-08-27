@@ -43,7 +43,8 @@ module.exports = function (opts, cmdArguments) {
 		cmdArguments = [];
 	}
 	if (toString.call(cmdArguments[0]) !== '[object Array]') {
-		cmdArguments[0] = [];
+		// @see https://github.com/zont/gulp-bower/issues/32
+		// cmdArguments[0] = [];
 	}
 	cmdArguments[1] = cmdArguments[1] || {};
 	cmdArguments[2] = opts;
